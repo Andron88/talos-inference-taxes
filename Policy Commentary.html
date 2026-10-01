@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andrei Andronic">
+
+<title>Fiscal Policy That Scales with AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-3e9027cfb9881279de052e36cb3db25e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#the-fiscal-problem" id="toc-the-fiscal-problem" class="nav-link active" data-scroll-target="#the-fiscal-problem">The Fiscal Problem</a></li>
+  <li><a href="#what-are-inference-taxes" id="toc-what-are-inference-taxes" class="nav-link" data-scroll-target="#what-are-inference-taxes">What Are Inference Taxes?</a>
+  <ul class="collapse">
+  <li><a href="#how-token-taxes-would-work" id="toc-how-token-taxes-would-work" class="nav-link" data-scroll-target="#how-token-taxes-would-work">How Token Taxes Would Work</a></li>
+  <li><a href="#the-reward" id="toc-the-reward" class="nav-link" data-scroll-target="#the-reward">The Reward</a></li>
+  </ul></li>
+  <li><a href="#who-pays-and-who-pushes-back" id="toc-who-pays-and-who-pushes-back" class="nav-link" data-scroll-target="#who-pays-and-who-pushes-back">Who Pays and Who Pushes Back</a></li>
+  <li><a href="#time-horizon-and-futures" id="toc-time-horizon-and-futures" class="nav-link" data-scroll-target="#time-horizon-and-futures">Time Horizon and Futures</a></li>
+  <li><a href="#a-first-step" id="toc-a-first-step" class="nav-link" data-scroll-target="#a-first-step">A First Step</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fiscal Policy That Scales with AI</h1>
+<p class="subtitle lead">The Case for European Inference Taxes</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andrei Andronic </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-fiscal-problem" class="level1">
+<h1>The Fiscal Problem</h1>
+<p>With headlines such as France’s expected <a href="https://www.reuters.com/business/french-finance-ministry-expects-record-debt-2026-reaching-nearly-120-gdp-2026-09-19/">record debt of 120% of GDP</a>, crises in European public finance have become increasingly prevalent. Labour taxes make up <a href="https://taxation-customs.ec.europa.eu/taxation/economic-analysis/data-taxation-trends_en">51.5% of EU-27 tax revenues</a>. Should AI leave a mark on labor markets, European governments would see their fiscal challenges compound as AI may accelerate a <a href="https://www.bruegel.org/blog-post/decline-labour-share-income">well</a> <a href="https://www.sciencedirect.com/science/article/pii/S0954349X25001596">documented</a> <a href="https://www.oecd.org/en/publications/productivity-dispersion-and-sectoral-labour-shares-in-europe_c07cf75a-en.html">trend</a> of falling labor share of GDP. While initial evidence on labor markets has seen effects <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/">focused on</a> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5516798">entry level jobs</a>, this may spread to more senior positions as systems are able to complete <a href="https://metr.org/time-horizons/">more complex tasks</a> and may fundamentally reshape labour participation.</p>
+<p>On the growth side of things, the US’s <a href="https://www.blackrock.com/us/individual/insights/ai-growth-and-fixed-income-opportunities">K-shaped</a> <a href="https://www.nbcnews.com/business/economy/ai-economy-growth-jobs-housing-rcna598010">economy</a> with growth <a href="https://fortune.com/2025/10/07/data-centers-gdp-growth-zero-first-half-2025-jason-furman-harvard-economist/">heavily driven</a> by AI capital expenditure should serve as a warning. Should labour markets get hit and capital contribute to an increasingly larger share of GDP, European governments would be scrambling to patch up holes in their public finances. Further, as more economic activity is mediated through AI, <a href="https://dealroom.co/reports/state-of-ai-in-europe-the-invisible-giant">American AI labs</a> would capture much economic value generated in Europe.</p>
+<p>How could fiscal authorities adjust to such scenarios? Attempts at leveraging corporate taxes may be brittle in the face of profit shifting which costs governments <a href="https://www.oecd.org/en/topics/base-erosion-and-profit-shifting-beps.html">100-240 billion USD or about 4-10% of global corporate tax revenue</a>. Meanwhile, Digital Service Taxes (DSTs) have been <a href="https://institutdelors.eu/en/publications/the-eu-must-tread-carefully-with-the-threat-of-a-european-digital-tax/">difficult</a> <a href="https://www.reuters.com/world/us/trump-threatens-100-tariff-any-country-that-imposes-digital-services-tax-2026-06-26/">politically</a>, may <a href="https://www.globaldigitalfoundation.org/who-will-bear-the-burden-of-dsts">affect innovation</a>, are <a href="https://taxfoundation.org/research/all/eu/digital-services-taxes-eu-budget/">regressive</a> and may even <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5843592">incentivise further profit shifting</a>.</p>
+<p>To prepare for AI powered economic changes coming, Europe will need new fiscal firepower. In particular, to balance fiscal goals with <a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence">industrial strategy</a>, Europe needs a tax base that scales with AI use and captures value where it occurs. Inference taxes could be the answer.</p>
+</section>
+<section id="what-are-inference-taxes" class="level1">
+<h1>What Are Inference Taxes?</h1>
+<p>Inference taxes are a small fixed charge per unit of AI use, levied at the point of use, or inference. That makes them an excise duty, a fixed charge per unit of a specific product, like fuel duty per litre.</p>
+<p>While inference taxes could be defined using units like FLOPs or energy use, token taxes seem to be the front runner. First, AI providers already bill per token, so the tax would fit existing invoices. Second, the token tax research agenda is more <a href="https://arxiv.org/abs/2603.04555">developed</a>. Finally, token taxes already have traction, having seen support from prominent tech figures like <a href="https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic">Dario Amodei</a>, <a href="https://x.com/mcuban/status/2055399906127344068">Mark Cuban</a> and <a href="https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make">Bill Gates</a>, and having been floated by US politicians <a href="https://fortune.com/2026/09/01/bill-tax-ai-tokens-fund-jobs-technology-unemployment/">Greg Casar</a> and <a href="https://www.tomsteyer.com/press/tom-steyer-unveils-a-jobs-guarantee-for-the-ai-era-plan">Tom Steyer</a> as well as UK MP <a href="https://www.parallelparliament.co.uk/mp/anneliese-dodds/vs/john-hayes">Anneliese Dodds</a>. As such, I will focus on token taxes as a specific example of the benefits of inference taxes at large.&nbsp;</p>
+<section id="how-token-taxes-would-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-token-taxes-would-work">How Token Taxes Would Work</h2>
+<p>Given the importance of capital investments for Europe’s industrial future, token taxes would be preferable to capital taxes as they target the use of AI rather than investments in building the infrastructure (training chips, data centers, etc) for it.</p>
+<p>With the EU already implementing VAT on digital services (via the <a href="https://vat-one-stop-shop.ec.europa.eu/index_en">One-Stop-Shop</a>) which follows the internationally accepted <a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/04/international-vat-gst-guidelines_g1g75db4/9789264271401-en.pdf">destination principle</a>, how would token taxes differ? First, VAT is reclaimed by businesses and is focused on final consumption while token taxes are targeting AI use including as inputs to business use (to tackle possible labor displacement). Second, per-token charges scale with volume of use and not simply prices (as VAT does). Given the current trend of <a href="https://epoch.ai/data-insights/llm-inference-price-trends">falling per token prices</a>, this will be more robust as AI further scales. We can compare this to fuel (itself a transformative economic input) which has both a VAT and an excise duty.</p>
+<p>The point-of-sale nature of token taxes leverages providers’ existing billing records which enables a tighter audit trail for enforcement and would allow the tax to be collected through the EU’s One-Stop-Shop.</p>
+<p>In practice, we would want to set up key exemptions or thresholds such as exempting inference used by researchers and start-ups or adding thresholds to target heavy users and effectively exempt private consumers. Classifying and auditing inference are <a href="https://arxiv.org/abs/2603.04555">open technical questions</a> that are closely linked to broader <a href="https://arxiv.org/abs/2402.08797">compute governance research</a> so there is a strong complementarity between inference taxes and <a href="https://arxiv.org/abs/2310.13625v1">compute policies</a> that target AI misuse or loss of control.&nbsp;</p>
+</section>
+<section id="the-reward" class="level2">
+<h2 class="anchored" data-anchor-id="the-reward">The Reward</h2>
+<p>Europe already has <a href="https://dealroom.co/reports/state-of-ai-in-europe-the-invisible-giant">double the number of LLM users</a> that the US has and <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2">European businesses are rapidly scaling their use</a>. As AI mediates more economic activity and should it lead to increased labour displacement, token taxes would let governments capture some of that value.</p>
+<p>No country has yet adopted a robot tax - though <a href="https://www.koreatimes.co.kr/business/tech-science/20170807/korea-takes-first-step-to-introduce-robot-tax">South Korea’s cut to automation tax credits</a> comes closest. That doesn’t make token taxes unrealistic. We must reform fiscal policy and hedge against the economic risks of AI - robot taxes will have to be a part of that, and token taxes should be our first step. There were no taxes on gasoline until Oregon pioneered penny-per-gallon levies in 1919, by 1932 it was federal policy. Dirt roads were being destroyed faster than property taxes could patch them. The externalities of a new technology had to make way for a new fiscal instrument.</p>
+<p>Should token taxes be implemented, we may hope that they mirror the success of VAT (one of the <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304387809000133">most successful fiscal innovations</a> of the 20th century) for AI consumption and unlock a new source of revenue for the European governments without clashing against Industrial strategy objectives.</p>
+</section>
+</section>
+<section id="who-pays-and-who-pushes-back" class="level1">
+<h1>Who Pays and Who Pushes Back</h1>
+<p>While previous attempts at traditional robot taxes <a href="https://www.reuters.com/article/world/uk/european-parliament-calls-for-robot-law-rejects-robot-tax-idUSKBN15V2K9/">failed in the EU</a> in large part due to European fears around innovation impacts, token taxes are likely to fare differently on this front. First, they are likely more pro-innovation than alternative AI taxes. Since token taxes target consumption (inference), they do not disincentivize the training of AI models or investments into capital resources like data centers (something at odds with <a href="https://www.ft.com/content/f054f927-b512-452a-b494-ea53f5ac1079">European strategic aims</a>).&nbsp;</p>
+<p>Given that token taxes would likely most affect large US AI companies, one can raise the potential push back that a US administration may have. First, such a tax should be implemented in a&nbsp; non-discriminatory manner (applying to both US labs and EU firms like Mistral). While the tax will be collected from the US firms who dominate European AI usage, we can expect some of this to be passed on to consumers. However, if we accept <a href="https://academic.oup.com/economicpolicy/article-abstract/15/30/48/2366367">lower employment due to labor taxes</a>, then we should tolerate possible AI use reduction for additional revenue in the face of labor displacement.&nbsp;&nbsp;</p>
+<p>In addition, token taxes would be strongest if implemented by a wider coalition of states. This would not only provide resistance to any political pushback, but also help contribute to global compute governance standards and cooperation.</p>
+</section>
+<section id="time-horizon-and-futures" class="level1">
+<h1>Time Horizon and Futures</h1>
+<p>As laid out in a <a href="https://www.brookings.edu/articles/future-tax-policy-a-public-finance-framework-for-the-age-of-ai/">Brookings paper</a>, an AI consumption tax (of which inference taxes are one form) is an essential source of revenue as AI proliferates and the economy starts to change. As such it is an important policy to pursue now that will likely add value in the short run and increase its value in the medium run. Should more <a href="https://www.anthropic.com/institute/econ-scenarios">extreme economic predictions</a> (like <a href="https://coefficientgiving.org/research/could-advanced-ai-drive-explosive-economic-growth/#Summary">growth</a> or <a href="https://www.forethought.org/research/the-industrial-explosion#the-industrial-explosion-will-start-after-the-intelligence-explosion-and-will-proceed-more-slowly">industrial</a> explosions) come true in the long run, then AI consumption taxes would be insufficient. Further, while token taxes are best suited for a world where most economic value is interfaced by LLMs, other inference taxes would be adaptable for different types of AI use and would rely on the same regulatory infrastructure.&nbsp;</p>
+</section>
+<section id="a-first-step" class="level1">
+<h1>A First Step</h1>
+<p>Inference taxes are no silver bullet - but neither is any single policy instrument. What they are is a foundational first step in both updating fiscal policy for the age of AI and for building out the regulatory capacity to enact a wider regime of national and supranational compute policies. They are a worthwhile policy to pursue with great upside for relatively little risk. They enable the value of AI to be captured where it is used making them especially relevant for jurisdictions without their own frontier models. They help develop a revenue base that grows with AI rather than shrinking with labour. They can be a key step in enabling Europe to take control of its technological agency.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/Andron88\.github\.io\/talos-inference-taxes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
