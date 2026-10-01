@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Fiscal Policy That Scales with AI"
+  page-navigation: false
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Contents"
+    toc-location: left
+    fontsize: 1.05em
+    linestretch: 1.6
+    link-external-newwindow: true

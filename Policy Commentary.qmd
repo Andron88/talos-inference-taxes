@@ -1,0 +1,71 @@
+---
+title: "Fiscal Policy That Scales with AI"
+subtitle: "The Case for European Inference Taxes"
+author: "Andrei Andronic"
+---
+
+# The Fiscal Problem
+
+With headlines such as France's expected [record debt of 120% of GDP](https://www.reuters.com/business/french-finance-ministry-expects-record-debt-2026-reaching-nearly-120-gdp-2026-09-19/), crises in European public finance have become increasingly prevalent. Labour taxes make up [51.5% of EU-27 tax revenues](https://taxation-customs.ec.europa.eu/taxation/economic-analysis/data-taxation-trends_en). Should AI leave a mark on labor markets, European governments would see their fiscal challenges compound as AI may accelerate a [well](https://www.bruegel.org/blog-post/decline-labour-share-income) [documented](https://www.sciencedirect.com/science/article/pii/S0954349X25001596) [trend](https://www.oecd.org/en/publications/productivity-dispersion-and-sectoral-labour-shares-in-europe_c07cf75a-en.html) of falling labor share of GDP. While initial evidence on labor markets has seen effects [focused on](https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/) [entry level jobs](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5516798), this may spread to more senior positions as systems are able to complete [more complex tasks](https://metr.org/time-horizons/) and may fundamentally reshape labour participation.
+
+On the growth side of things, the US’s [K-shaped](https://www.blackrock.com/us/individual/insights/ai-growth-and-fixed-income-opportunities) [economy](https://www.nbcnews.com/business/economy/ai-economy-growth-jobs-housing-rcna598010) with growth [heavily driven](https://fortune.com/2025/10/07/data-centers-gdp-growth-zero-first-half-2025-jason-furman-harvard-economist/) by AI capital expenditure should serve as a warning. Should labour markets get hit and capital contribute to an increasingly larger share of GDP, European governments would be scrambling to patch up holes in their public finances. Further, as more economic activity is mediated through AI, [American AI labs](https://dealroom.co/reports/state-of-ai-in-europe-the-invisible-giant) would capture much economic value generated in Europe.
+
+How could fiscal authorities adjust to such scenarios? Attempts at leveraging corporate taxes may be brittle in the face of profit shifting which costs governments [100-240 billion USD or about 4-10% of global corporate tax revenue](https://www.oecd.org/en/topics/base-erosion-and-profit-shifting-beps.html). Meanwhile, Digital Service Taxes (DSTs) have been [difficult](https://institutdelors.eu/en/publications/the-eu-must-tread-carefully-with-the-threat-of-a-european-digital-tax/) [politically](https://www.reuters.com/world/us/trump-threatens-100-tariff-any-country-that-imposes-digital-services-tax-2026-06-26/), may [affect innovation](https://www.globaldigitalfoundation.org/who-will-bear-the-burden-of-dsts), are [regressive](https://taxfoundation.org/research/all/eu/digital-services-taxes-eu-budget/) and may even [incentivise further profit shifting](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5843592).
+
+To prepare for AI powered economic changes coming, Europe will need new fiscal firepower. In particular, to balance fiscal goals with [industrial strategy](https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence), Europe needs a tax base that scales with AI use and captures value where it occurs. Inference taxes could be the answer.
+
+  
+
+# What Are Inference Taxes?
+
+Inference taxes are a small fixed charge per unit of AI use, levied at the point of use, or inference. That makes them an excise duty, a fixed charge per unit of a specific product, like fuel duty per litre.
+
+While inference taxes could be defined using units like FLOPs or energy use, token taxes seem to be the front runner. First, AI providers already bill per token, so the tax would fit existing invoices. Second, the token tax research agenda is more [developed](https://arxiv.org/abs/2603.04555). Finally, token taxes already have traction, having seen support from prominent tech figures like [Dario Amodei](https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic), [Mark Cuban](https://x.com/mcuban/status/2055399906127344068) and [Bill Gates](https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make), and having been floated by US politicians [Greg Casar](https://fortune.com/2026/09/01/bill-tax-ai-tokens-fund-jobs-technology-unemployment/) and [Tom Steyer](https://www.tomsteyer.com/press/tom-steyer-unveils-a-jobs-guarantee-for-the-ai-era-plan) as well as UK MP [Anneliese Dodds](https://www.parallelparliament.co.uk/mp/anneliese-dodds/vs/john-hayes). As such, I will focus on token taxes as a specific example of the benefits of inference taxes at large. 
+
+  
+
+## How Token Taxes Would Work
+
+Given the importance of capital investments for Europe's industrial future, token taxes would be preferable to capital taxes as they target the use of AI rather than investments in building the infrastructure (training chips, data centers, etc) for it.
+
+With the EU already implementing VAT on digital services (via the [One-Stop-Shop](https://vat-one-stop-shop.ec.europa.eu/index_en)) which follows the internationally accepted [destination principle](https://www.oecd.org/content/dam/oecd/en/publications/reports/2017/04/international-vat-gst-guidelines_g1g75db4/9789264271401-en.pdf), how would token taxes differ? First, VAT is reclaimed by businesses and is focused on final consumption while token taxes are targeting AI use including as inputs to business use (to tackle possible labor displacement). Second, per-token charges scale with volume of use and not simply prices (as VAT does). Given the current trend of [falling per token prices](https://epoch.ai/data-insights/llm-inference-price-trends), this will be more robust as AI further scales. We can compare this to fuel (itself a transformative economic input) which has both a VAT and an excise duty.
+
+The point-of-sale nature of token taxes leverages providers' existing billing records which enables a tighter audit trail for enforcement and would allow the tax to be collected through the EU's One-Stop-Shop.
+
+In practice, we would want to set up key exemptions or thresholds such as exempting inference used by researchers and start-ups or adding thresholds to target heavy users and effectively exempt private consumers. Classifying and auditing inference are [open technical questions](https://arxiv.org/abs/2603.04555) that are closely linked to broader [compute governance research](https://arxiv.org/abs/2402.08797) so there is a strong complementarity between inference taxes and [compute policies](https://arxiv.org/abs/2310.13625v1) that target AI misuse or loss of control. 
+
+  
+  
+
+## The Reward
+
+Europe already has [double the number of LLM users](https://dealroom.co/reports/state-of-ai-in-europe-the-invisible-giant) that the US has and [European businesses are rapidly scaling their use](https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2). As AI mediates more economic activity and should it lead to increased labour displacement, token taxes would let governments capture some of that value.
+
+No country has yet adopted a robot tax - though [South Korea's cut to automation tax credits](https://www.koreatimes.co.kr/business/tech-science/20170807/korea-takes-first-step-to-introduce-robot-tax) comes closest. That doesn't make token taxes unrealistic. We must reform fiscal policy and hedge against the economic risks of AI - robot taxes will have to be a part of that, and token taxes should be our first step. There were no taxes on gasoline until Oregon pioneered penny-per-gallon levies in 1919, by 1932 it was federal policy. Dirt roads were being destroyed faster than property taxes could patch them. The externalities of a new technology had to make way for a new fiscal instrument.
+
+Should token taxes be implemented, we may hope that they mirror the success of VAT (one of the [most successful fiscal innovations](https://www.sciencedirect.com/science/article/abs/pii/S0304387809000133) of the 20th century) for AI consumption and unlock a new source of revenue for the European governments without clashing against Industrial strategy objectives.
+
+  
+
+
+# Who Pays and Who Pushes Back
+
+While previous attempts at traditional robot taxes [failed in the EU](https://www.reuters.com/article/world/uk/european-parliament-calls-for-robot-law-rejects-robot-tax-idUSKBN15V2K9/) in large part due to European fears around innovation impacts, token taxes are likely to fare differently on this front. First, they are likely more pro-innovation than alternative AI taxes. Since token taxes target consumption (inference), they do not disincentivize the training of AI models or investments into capital resources like data centers (something at odds with [European strategic aims](https://www.ft.com/content/f054f927-b512-452a-b494-ea53f5ac1079)). 
+
+Given that token taxes would likely most affect large US AI companies, one can raise the potential push back that a US administration may have. First, such a tax should be implemented in a  non-discriminatory manner (applying to both US labs and EU firms like Mistral). While the tax will be collected from the US firms who dominate European AI usage, we can expect some of this to be passed on to consumers. However, if we accept [lower employment due to labor taxes](https://academic.oup.com/economicpolicy/article-abstract/15/30/48/2366367), then we should tolerate possible AI use reduction for additional revenue in the face of labor displacement.  
+
+In addition, token taxes would be strongest if implemented by a wider coalition of states. This would not only provide resistance to any political pushback, but also help contribute to global compute governance standards and cooperation.
+
+  
+
+# Time Horizon and Futures
+
+As laid out in a [Brookings paper](https://www.brookings.edu/articles/future-tax-policy-a-public-finance-framework-for-the-age-of-ai/), an AI consumption tax (of which inference taxes are one form) is an essential source of revenue as AI proliferates and the economy starts to change. As such it is an important policy to pursue now that will likely add value in the short run and increase its value in the medium run. Should more [extreme economic predictions](https://www.anthropic.com/institute/econ-scenarios) (like [growth](https://coefficientgiving.org/research/could-advanced-ai-drive-explosive-economic-growth/#Summary) or [industrial](https://www.forethought.org/research/the-industrial-explosion#the-industrial-explosion-will-start-after-the-intelligence-explosion-and-will-proceed-more-slowly) explosions) come true in the long run, then AI consumption taxes would be insufficient. Further, while token taxes are best suited for a world where most economic value is interfaced by LLMs, other inference taxes would be adaptable for different types of AI use and would rely on the same regulatory infrastructure. 
+
+
+
+
+# A First Step
+
+Inference taxes are no silver bullet - but neither is any single policy instrument. What they are is a foundational first step in both updating fiscal policy for the age of AI and for building out the regulatory capacity to enact a wider regime of national and supranational compute policies. They are a worthwhile policy to pursue with great upside for relatively little risk. They enable the value of AI to be captured where it is used making them especially relevant for jurisdictions without their own frontier models. They help develop a revenue base that grows with AI rather than shrinking with labour. They can be a key step in enabling Europe to take control of its technological agency.
+
